@@ -21,6 +21,59 @@ function clearCookie(name) {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; SameSite=Lax`;
 }
 
+function setupResponsiveTopbarMenu() {
+    const topbar = document.querySelector('.topbarContainer');
+    const nav = document.querySelector('.topbarNavbarContainer');
+
+    if (!topbar || !nav) {
+        return;
+    }
+
+    if (topbar.querySelector('.topbarMenuToggle')) {
+        return;
+    }
+
+    const toggleButton = document.createElement('button');
+    toggleButton.type = 'button';
+    toggleButton.className = 'topbarMenuToggle';
+    toggleButton.setAttribute('aria-label', 'Toggle navigation menu');
+    toggleButton.setAttribute('aria-expanded', 'false');
+
+    for (let i = 0; i < 3; i += 1) {
+        const line = document.createElement('span');
+        line.className = 'topbarMenuToggleLine';
+        line.setAttribute('aria-hidden', 'true');
+        toggleButton.appendChild(line);
+    }
+
+    const rightContainer = topbar.querySelector('.topbarRightContainer');
+    if (rightContainer) {
+        topbar.insertBefore(toggleButton, rightContainer);
+    } else {
+        topbar.appendChild(toggleButton);
+    }
+
+    const closeMenu = () => {
+        topbar.classList.remove('menuOpen');
+        toggleButton.setAttribute('aria-expanded', 'false');
+    };
+
+    toggleButton.addEventListener('click', () => {
+        const isOpen = topbar.classList.toggle('menuOpen');
+        toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) {
+            closeMenu();
+        }
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+}
+
 function updateTopbarUserState() {
     const loginButton = document.querySelector('.loginButton');
     const userName = getCookie('unionUserName');
@@ -114,5 +167,6 @@ function setupPrototypeAuthButtons() {
     }
 }
 
+setupResponsiveTopbarMenu();
 updateTopbarUserState();
 setupPrototypeAuthButtons();

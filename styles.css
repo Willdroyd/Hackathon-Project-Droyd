@@ -59,6 +59,31 @@ a{
     display:flex;
     gap:20px;
 }
+
+.topbarMenuToggle{
+    display:none;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:10px;
+    background-color:rgba(255, 255, 255, 0.22);
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+    flex-direction:column;
+}
+
+.topbarMenuToggleLine{
+    width:20px;
+    height:2px;
+    background-color:#ffffff;
+    border-radius:999px;
+}
+
+.topbarContainer.menuOpen .topbarMenuToggle{
+    background-color:rgba(255, 255, 255, 0.34);
+}
 .topbarContainer{
     inset: 0;
     background: radial-gradient(at center center, rgba(37, 99, 235, 0.1) 0%);
@@ -448,6 +473,68 @@ a{
 
 .projectCategoryLine{
     margin-top:auto;
+}
+
+@media (max-width:900px){
+    .topbarContainer{
+        height:auto;
+        min-height:76px;
+        padding:12px 14px;
+        gap:10px;
+        flex-wrap:wrap;
+    }
+
+    .topbarLeftContainer{
+        padding-left:0;
+    }
+
+    .topbarLogoImage{
+        height:48px;
+    }
+
+    .topbarMenuToggle{
+        display:inline-flex;
+        margin-left:auto;
+        margin-right:8px;
+    }
+
+    .topbarRightContainer{
+        order:2;
+    }
+
+    .topbarRightContainer .loginButton{
+        font-size:16px;
+        padding:8px 12px;
+    }
+
+    .topbarNavbarContainer{
+        order:3;
+        width:100%;
+        display:none;
+        align-items:center;
+        gap:0;
+        overflow-x:auto;
+        white-space:nowrap;
+        padding:6px 2px 2px 2px;
+        scrollbar-width:thin;
+    }
+
+    .topbarNavbarContainer a{
+        flex:0 0 auto;
+        padding:8px 10px;
+        border-radius:999px;
+        background-color:rgba(255, 255, 255, 0.12);
+        margin-right:8px;
+    }
+
+    .topbarNavbarContainer .baseText{
+        color:#ffffff;
+        font-size:18px;
+    }
+
+    .topbarContainer.menuOpen .topbarNavbarContainer{
+        display:flex;
+    }
 }
 
 @media (max-width:900px){
