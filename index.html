@@ -6,18 +6,21 @@
     <title>UniOn</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="./photos/pwa-icon-192.png">
+    <link rel="apple-touch-icon" href="./photos/apple-touch-icon.png">
     <meta name="theme-color" content="#0d6efd">
 </head>
 <body>
     <div class="topbarContainer">
         <div class="topbarLeftContainer">
-            <h1 class="baseText">UniOn</h1>
+            <a href="./index.html" aria-label="UniOn Home">
+                <img src="./photos/logo-png.png" alt="UniOn Logo" class="topbarLogoImage">
+            </a>
         </div>
         <div class="topbarNavbarContainer">
             <a href="./index.html"><span class="baseText">მთავარი</span></a>
             <a href="./html/university.html"><span class="baseText">უნივერსიტეტები</span></a>
             <a href="./html/projects.html"><span class="baseText">პროექტები</span></a>
-            <a href="./html/lectures.html"><span class="baseText">ლექციები</span></a>
             <a href="./html/aboutus.html"><span class="baseText">ჩვენ შესახებ</span></a>
             <a href="./html/contact.html"><span class="baseText">კონტაქტი</span></a>
         </div>
@@ -28,21 +31,108 @@
         </div>
     </div>
 
-    <div class="mainContainer">
-        <div class="funBoxContainer">
-            <div class="funBox funBoxStyle">Click Me!</div>
-            <div class="funBox2 funBoxStyle">Click Me Instead!</div>
+    <div class="mainContainer homeMainContainer">
+        <div class="heroSearchCard">
+            <h2 class="baseText heroSearchTitle">მოძებნეთ უნივერსიტეტები და პროექტები თქვენთვის</h2>
+            <input
+                type="search"
+                class="heroSearchInput"
+                placeholder="მოძებნე უნივერსიტეტი ან პროექტი"
+                aria-label="მოძებნე უნივერსიტეტი ან პროექტი"
+            >
+        </div>
+    </div>
+
+    <div class="featuredProjectsContainer homeFeaturedProjectsContainer">
+        <h2 class="baseText featuredProjectsTitle">წარმოჩენილი პროექტები</h2>
+        <div class="projectCategories" id="projectCategories">
+            <button class="categoryButton is-active" type="button" data-category="all">ყველა</button>
+            <button class="categoryButton" type="button" data-category="კონკურსები">კონკურსები</button>
+            <button class="categoryButton" type="button" data-category="ლექცია">ლექცია</button>
+            <button class="categoryButton" type="button" data-category="გაეროს მოდელირება">გაეროს მოდელირება</button>
+            <button class="categoryButton" type="button" data-category="ჰაკათონი">ჰაკათონი</button>
+        </div>
+
+        <div class="projectCardGrid" id="projectCardGrid">
+            <article class="projectCard" data-category="კონკურსები">
+                <img src="./photos/logo.png" alt="Quiz competition project cover" class="projectCardImage">
+                <h3 class="baseText projectCardTitle">რა სად როდის კონკურსი</h3>
+                <p class="smallText projectMetaLine">რეგისტრაციის ბოლო ვადა: 03/6/2026</p>
+                <p class="smallText projectMetaLine">ღონისძიების თარიღი: 05/6/2026</p>
+                <p class="smallText projectMetaLine projectHostLocationLine">
+                    <span class="mapIcon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.02 7 13 7 13s7-7.98 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                    </span>
+                    <a class="projectLocationLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">აღმოსავლეთ ევროპის უნივერსიტეტი - ირინა ენუქიძის 6</a>
+                </p>
+                <p class="smallText projectCategoryLine">კატეგორია: <span class="projectCategoryTag">კონკურსები</span></p>
+            </article>
+
+            <article class="projectCard" data-category="ლექცია">
+                <img src="./photos/logo.png" alt="AI lecture project cover" class="projectCardImage">
+                <h3 class="baseText projectCardTitle">AI პროდუქტის ლექციების სერია</h3>
+                <p class="smallText projectMetaLine">რეგისტრაციის ბოლო ვადა: 27/5/2026</p>
+                <p class="smallText projectMetaLine">ღონისძიების თარიღი: 29/5/2026</p>
+                <p class="smallText projectMetaLine projectHostLocationLine">
+                    <span class="mapIcon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.02 7 13 7 13s7-7.98 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                    </span>
+                    <a class="projectLocationLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">აღმოსავლეთ ევროპის უნივერსიტეტი - ირინა ენუქიძის 6</a>
+                </p>
+                <p class="smallText projectCategoryLine">კატეგორია: <span class="projectCategoryTag">ლექცია</span></p>
+            </article>
+
+            <article class="projectCard" data-category="გაეროს მოდელირება">
+                <img src="./photos/logo.png" alt="Model UN project cover" class="projectCardImage">
+                <h3 class="baseText projectCardTitle">გაეროს მოდელირება: კავკასიის სამიტი</h3>
+                <p class="smallText projectMetaLine">რეგისტრაციის ბოლო ვადა: 01/6/2026</p>
+                <p class="smallText projectMetaLine">ღონისძიების თარიღი: 04/6/2026</p>
+                <p class="smallText projectMetaLine projectHostLocationLine">
+                    <span class="mapIcon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.02 7 13 7 13s7-7.98 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                    </span>
+                    <a class="projectLocationLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">თბილისის თავისუფალი უნივერსიტეტი - დავით აღმაშენებლის ხეივანი 240</a>
+                </p>
+                <p class="smallText projectCategoryLine">კატეგორია: <span class="projectCategoryTag">გაეროს მოდელირება</span></p>
+            </article>
+
+            <article class="projectCard" data-category="ჰაკათონი">
+                <img src="./photos/logo.png" alt="Hackathon project cover" class="projectCardImage">
+                <h3 class="baseText projectCardTitle">ფინტექ ჰაკათონის უიქენდი</h3>
+                <p class="smallText projectMetaLine">რეგისტრაციის ბოლო ვადა: 05/6/2026</p>
+                <p class="smallText projectMetaLine">ღონისძიების თარიღი: 08/6/2026</p>
+                <p class="smallText projectMetaLine projectHostLocationLine">
+                    <span class="mapIcon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.02 7 13 7 13s7-7.98 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                    </span>
+                    <a class="projectLocationLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">აღმოსავლეთ ევროპის უნივერსიტეტი - სულხან ცინცაძის ქუჩა 33</a>
+                </p>
+                <p class="smallText projectCategoryLine">კატეგორია: <span class="projectCategoryTag">ჰაკათონი</span></p>
+            </article>
+
+            <article class="projectCard" data-category="კონკურსები">
+                <img src="./photos/logo.png" alt="Data Sprint project cover" class="projectCardImage">
+                <h3 class="baseText projectCardTitle">მონაცემთა სპრინტის კონკურსი 2026</h3>
+                <p class="smallText projectMetaLine">რეგისტრაციის ბოლო ვადა: 24/5/2026</p>
+                <p class="smallText projectMetaLine">ღონისძიების თარიღი: 24/5/2026</p>
+                <p class="smallText projectMetaLine projectHostLocationLine">
+                    <span class="mapIcon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.02 7 13 7 13s7-7.98 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                    </span>
+                    <a class="projectLocationLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">აღმოსავლეთ ევროპის უნივერსიტეტი - შატილის ქუჩა 4</a>
+                </p>
+                <p class="smallText projectCategoryLine">კატეგორია: <span class="projectCategoryTag">კონკურსები</span></p>
+            </article>
         </div>
     </div>
 
     <footer class="siteFooter">
         <div class="footerLogoBlock">
-            <img src="./photos/icon-192.png" alt="UniOn Logo" class="footerLogoImage">
-            <span class="baseText">UniOn</span>
+            <img src="./photos/logo-png.png" alt="UniOn Logo" class="footerLogoImage">
         </div>
         <div class="footerColumns">
             <div>
-                <h3 class="baseText footerColTitle">Pages</h3>
+                <h3 class="baseText footerColTitle">ლინკები</h3>
                 <a href="./html/aboutus.html"><p class="footerText">ჩვენს შესახებ</p></a>
                 <a href="./html/contact.html"><p class="footerText">კონტაქტი</p></a>
             </div>
@@ -62,5 +152,6 @@
   }
 </script>
     <script src="./scripts.js"></script>
+    <script src="./project-category-filter.js"></script>
 </body>
 </html>

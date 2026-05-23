@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hackathon-project-v2';
+const CACHE_NAME = 'hackathon-project-v3';
 
 const URLS_TO_CACHE = [
   '/Hackathon-Project-Droyd/',
@@ -7,8 +7,10 @@ const URLS_TO_CACHE = [
   '/Hackathon-Project-Droyd/scripts.js',
   '/Hackathon-Project-Droyd/manifest.json',
   '/Hackathon-Project-Droyd/photos/error.png',
-  '/Hackathon-Project-Droyd/photos/icon-192.png',
-  '/Hackathon-Project-Droyd/photos/icon-512.png'
+  '/Hackathon-Project-Droyd/photos/pwa-icon-192.png',
+  '/Hackathon-Project-Droyd/photos/pwa-icon-512.png',
+  '/Hackathon-Project-Droyd/photos/pwa-icon-maskable-512.png',
+  '/Hackathon-Project-Droyd/photos/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', event => {
