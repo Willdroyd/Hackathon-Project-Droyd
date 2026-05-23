@@ -4,7 +4,7 @@
     padding:0px;
 }
 body {
-    background-color: #21f0ff;
+    background-color: #24568e;
 }
 
 .pageShell{
@@ -32,20 +32,6 @@ a{
     color:white;
     font-family: 'BPG Arial', sans-serif;
     font-size: 26px;
-}
-.funBoxStyle{
-    border: 1px solid yellow;
-    height:140px;
-    width:240px;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.funBoxContainer{
-    display:flex;
-    justify-content:space-around;
-    flex-wrap:wrap;
 }
 .mainContainer{
     width:100%;
@@ -172,6 +158,47 @@ a{
     font-size:18px;
     text-align:center;
     opacity:0.95;
+}
+
+.contactInfoBox{
+    margin-top:14px;
+    background:rgba(255, 255, 255, 0.12);
+    border:1px solid rgba(255, 255, 255, 0.3);
+    border-radius:12px;
+    padding:14px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.contactInfoTitle{
+    font-size:22px;
+    font-weight:700;
+}
+
+.contactInfoLine{
+    font-size:20px;
+    line-height:1.4;
+}
+
+.contactInfoNote{
+    font-size:18px;
+    opacity:0.95;
+}
+
+.facebookLinkButton{
+    margin-top:16px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    padding:12px 18px;
+    background-color:#1877f2;
+    color:white;
+    font-family:'BPG Arial', sans-serif;
+    font-size:20px;
+    font-weight:700;
+    width:fit-content;
 }
 
 .siteFooter{
