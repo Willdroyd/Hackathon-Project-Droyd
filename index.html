@@ -3,23 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UniOn</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#0d6efd">
 </head>
 <body>
     <div class="topbarContainer">
-        <center>
-            <h1>Title!</h1>
-        </center>
+        <div class="topbarLeftContainer">
+            <h1 class="baseText">UniOn</h1>
+        </div>
+        <div class="topbarNavbarContainer">
+            <a href="./index.html"><span class="baseText">მთავარი</span></a>
+            <a href="./html/university.html"><span class="baseText">უნივერსიტეტები</span></a>
+            <a href="./html/projects.html"><span class="baseText">პროექტები</span></a>
+            <a href="./html/lectures.html"><span class="baseText">ლექციები</span></a>
+            <a href="./html/aboutus.html"><span class="baseText">ჩვენ შესახებ</span></a>
+            <a href="./html/contact.html"><span class="baseText">კონტაქტი</span></a>
+        </div>
+        <div class="topbarRightContainer">
+            <a href="./html/signin.html">
+                <button class="loginButton">Sign In</button>
+            </a>
+        </div>
     </div>
+
     <div class="mainContainer">
         <div class="funBoxContainer">
             <div class="funBox funBoxStyle">Click Me!</div>
             <div class="funBox2 funBoxStyle">Click Me Instead!</div>
         </div>
     </div>
+
+    <footer class="siteFooter">
+        <div class="footerLogoBlock">
+            <img src="./photos/icon-192.png" alt="UniOn Logo" class="footerLogoImage">
+            <span class="baseText">UniOn</span>
+        </div>
+        <div class="footerColumns">
+            <div>
+                <h3 class="baseText footerColTitle">Pages</h3>
+                <a href="./html/aboutus.html"><p class="footerText">ჩვენს შესახებ</p></a>
+                <a href="./html/contact.html"><p class="footerText">კონტაქტი</p></a>
+            </div>
+            <div>
+                <h3 class="baseText footerColTitle">Contact</h3>
+                <p class="footerText">&#9993; : hello@union.example</p>
+                <p class="footerText">&#9743; : +995 555 12 34 56</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
   if ('serviceWorker' in navigator) {
