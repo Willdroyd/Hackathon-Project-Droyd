@@ -22,7 +22,7 @@ document.addEventListener('keydown', event => {
 });
 function Reset(){
     title.textContent = "Title!";
-    funBox.style.display = "block";
-    funBox2.style.display = "block";
+    funBox.style.display = "flex";
+    funBox2.style.display = "flex";
     mainContainer.style.backgroundImage = "none";
 }
