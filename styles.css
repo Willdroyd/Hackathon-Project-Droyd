@@ -136,8 +136,9 @@ a{
 }
 
 .signinLogo{
-    width:92px;
-    height:92px;
+    width:clamp(76px, 20vw, 112px);
+    height:auto;
+    display:block;
 }
 
 .socialButton{
