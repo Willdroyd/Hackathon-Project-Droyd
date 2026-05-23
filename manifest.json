@@ -1,6 +1,6 @@
 {
-  "name": "Hackathon Project Droyd",
-  "short_name": "Hackathon",
+  "name": "UniOn",
+  "short_name": "UniOn",
   "id": "/Hackathon-Project-Droyd/",
   "start_url": "/Hackathon-Project-Droyd/",
   "scope": "/Hackathon-Project-Droyd/",
@@ -8,7 +8,7 @@
   "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#0d6efd",
-  "description": "Hackathon Project Droyd progressive web app.",
+  "description": "UniOn progressive web app.",
   "icons": [
     {
       "src": "/Hackathon-Project-Droyd/photos/pwa-icon-192.png",
