@@ -1,11 +1,14 @@
-const CACHE_NAME = 'hackathon-project-v1';
+const CACHE_NAME = 'hackathon-project-v2';
 
 const URLS_TO_CACHE = [
   '/Hackathon-Project-Droyd/',
   '/Hackathon-Project-Droyd/index.html',
   '/Hackathon-Project-Droyd/styles.css',
   '/Hackathon-Project-Droyd/scripts.js',
-  '/Hackathon-Project-Droyd/manifest.json'
+  '/Hackathon-Project-Droyd/manifest.json',
+  '/Hackathon-Project-Droyd/photos/error.png',
+  '/Hackathon-Project-Droyd/photos/icon-192.png',
+  '/Hackathon-Project-Droyd/photos/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
